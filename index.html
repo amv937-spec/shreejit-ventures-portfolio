@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shreejit Ventures - Portfolio & Virtual Trading</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/6a492d7d-e35c-4ac8-acc5-1abea55f0d52/2025-12-29T05-11-52-741Z-8180fbeb-chat-image-1766985112721-0.jpg" alt="Shreejit Ventures Logo" class="logo">
+    <p class="tagline">Turning Visions Into Value</p>
+  </header>
+
+  <nav class="nav">
+    <button id="portfolioBtn" class="active">📊 Portfolio</button>
+    <button id="tradingBtn">📈 Virtual Trading</button>
+  </nav>
+
+  <main class="content">
+    <div id="portfolioView">
+      <h1>Portfolio Overview</h1>
+      <div class="stat-card">
+        <h3>Total Value</h3>
+        <p class="value" id="totalValue">$0.00</p>
+      </div>
+
+      <h2>Live Market Data</h2>
+      <div class="stocks-grid" id="stocksGrid"></div>
+
+      <div id="holdingsSection" class="holdings" style="display:none;">
+        <h2>Your Holdings</h2>
+        <div id="holdingsList"></div>
+      </div>
+    </div>
+
+    <div id="tradingView" style="display:none;">
+      <h1>Virtual Trading Platform</h1>
+      <p class="disclaimer">⚠️ Educational purposes only - No real money involved</p>
+
+      <div class="balance-card">
+        <h3>Virtual Balance</h3>
+        <p class="balance" id="balance">$100,000.00</p>
+      </div>
+
+      <div class="trading-grid">
+        <div>
+          <h2>Select Stock</h2>
+          <div class="stock-select" id="stockSelect"></div>
+        </div>
+
+        <div class="order-panel">
+          <h2>Place Order</h2>
+          <div class="order-buttons">
+            <button id="buyBtn" class="buy active">Buy</button>
+            <button id="sellBtn" class="sell">Sell</button>
+          </div>
+
+          <label>
+            Quantity
+            <input type="number" id="quantity" min="1" value="1">
+          </label>
+
+          <div class="summary" id="summary" style="display:none;">
+            <p id="summaryText">Total: $0.00</p>
+          </div>
+
+          <button class="execute buy" id="executeBtn" disabled>Execute Buy Order</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
